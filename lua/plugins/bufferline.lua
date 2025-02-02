@@ -3,6 +3,7 @@ return {
     'akinsho/bufferline.nvim',
     version = '*',
     event = 'VeryLazy',
+    dependencies = { 'echasnovski/mini.icons' },
     keys = {
       { '<leader>bp', '<Cmd>BufferLineTogglePin<CR>', desc = 'Toggle Pin' },
       { '<leader>bP', '<Cmd>BufferLineGroupClose ungrouped<CR>', desc = 'Delete Non-Pinned Buffers' },
@@ -18,6 +19,12 @@ return {
     config = function()
       require('bufferline').setup {
         options = {
+          close_command = function(n)
+            Snacks.bufdelete(n)
+          end,
+          right_mouse_command = function(n)
+            Snacks.bufdelete(n)
+          end,
           diagnostics = 'nvim_lsp',
           always_show_bufferline = false,
           offsets = {

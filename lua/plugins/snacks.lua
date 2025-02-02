@@ -13,9 +13,9 @@ return {
     {
       '<leader>/',
       function()
-        Snacks.picker.grep()
+        Snacks.picker.grep { cwd = require('util.root').get_project_root() }
       end,
-      desc = 'Grep',
+      desc = 'Grep (Root Dir)',
     },
     {
       '<leader>:',
