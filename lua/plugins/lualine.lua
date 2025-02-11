@@ -1,11 +1,11 @@
 return {
   'nvim-lualine/lualine.nvim',
   dependencies = { 'echasnovski/mini.icons' },
-  event = 'VeryLazy',
+  event = { 'VeryLazy' },
   config = function()
     require('lualine').setup {
       options = {
-        theme = 'catppuccin',
+        theme = 'rose-pine',
         disabled_filetypes = { statusline = { 'dashboard', 'snacks_dashboard' } },
       },
       sections = {

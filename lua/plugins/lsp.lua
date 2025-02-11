@@ -10,7 +10,16 @@ return {
       -- completion
       'saghen/blink.cmp',
     },
-    keys = { { '<leader>cm', '<cmd>Mason<cr>', desc = 'Mason Installer' } },
+    keys = {
+      { '<leader>cm', '<cmd>Mason<cr>', desc = 'Mason Installer' },
+      {
+        '<leader>ca',
+        function()
+          vim.lsp.buf.code_action()
+        end,
+        desc = 'Code Actions',
+      },
+    },
     config = function()
       local lspconfig = require 'lspconfig'
       local mason = require 'mason'
@@ -21,7 +30,6 @@ return {
       mason_lspconfig.setup {
         ensure_installed = {
           'lua_ls',
-          'rust_analyzer',
           'astro',
           'clangd',
           'cmake',
@@ -32,7 +40,6 @@ return {
           'elixirls',
           'graphql',
           'html',
-          'eslint',
           'biome',
           'ts_ls',
           'jsonls',

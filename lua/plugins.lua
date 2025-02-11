@@ -9,7 +9,7 @@
 --    :Lazy update
 --
 require('lazy').setup({
-  require 'plugins/colorscheme',
+  require 'plugins/rosepine',
   require 'plugins/mini-icons',
   require 'plugins/snacks',
   require 'plugins/noice',
@@ -21,11 +21,13 @@ require('lazy').setup({
   require 'plugins/treesitter',
   require 'plugins/conform',
   require 'plugins/lint',
+  require 'plugins/rustacean',
   require 'plugins/lazydev',
   require 'plugins/trouble',
   require 'plugins/mini-pairs',
   require 'plugins/grug-far',
   require 'plugins/gitsigns',
+  require 'plugins/lazygit',
 }, {
   ui = {
     -- If you are using a Nerd Font: set icons to an empty table which will use the

@@ -34,7 +34,8 @@ return {
           },
         },
         -- Enable catppuccin colors
-        highlights = require('catppuccin.groups.integrations.bufferline').get(),
+        -- highlights = require('catppuccin.groups.integrations.bufferline').get(),
+        highlights = require 'rose-pine.plugins.bufferline',
       }
     end,
   },
