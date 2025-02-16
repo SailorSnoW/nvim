@@ -35,6 +35,7 @@ return {
           lua = { 'stylua' },
           sh = { 'shfmt' },
           rust = { 'rustfmt', lsp_format = 'fallback' },
+          typescript = { 'prettierd', 'prettier' },
           javascript = { 'prettierd', 'prettier', stop_after_first = true },
           astro = { 'prettier' },
           markdown = { 'prettier', 'markdownlint-cli2', 'markdown-toc' },

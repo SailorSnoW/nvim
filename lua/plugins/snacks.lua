@@ -13,9 +13,9 @@ return {
     {
       '<leader>/',
       function()
-        Snacks.picker.grep { cwd = require('util.root').get_project_root() }
+        Snacks.picker.grep { filter = { cwd = true } }
       end,
-      desc = 'Grep (Root Dir)',
+      desc = 'Grep (Cwd)',
     },
     {
       '<leader>:',
@@ -27,9 +27,9 @@ return {
     {
       '<leader><space>',
       function()
-        Snacks.picker.files { cwd = require('util.root').get_project_root() }
+        Snacks.picker.files { filter = { cwd = true } }
       end,
-      desc = 'Find Files (Root Dir)',
+      desc = 'Find Files',
     },
     -- find
     {
@@ -40,25 +40,18 @@ return {
       desc = 'Buffers',
     },
     {
-      '<leader>fc',
-      function()
-        Snacks.picker.files { cwd = vim.fn.stdpath 'config' }
-      end,
-      desc = 'Find Config File',
-    },
-    {
       '<leader>ff',
       function()
-        Snacks.picker.files { cwd = require('util.root').get_project_root() }
+        Snacks.picker.files { filter = { cwd = true } }
       end,
-      desc = 'Find Files (Root Dir)',
+      desc = 'Find Files',
     },
     {
       '<leader>fF',
       function()
         Snacks.picker.files()
       end,
-      desc = 'Find Files (Cwd)',
+      desc = 'Find Files (Root Dir)',
     },
 
     {
@@ -93,9 +86,9 @@ return {
     {
       '<leader>sg',
       function()
-        Snacks.picker.grep { cwd = require('util.root').get_project_root() }
+        Snacks.picker.grep { filter = { cwd = true } }
       end,
-      desc = 'Grep (Root Dir)',
+      desc = 'Grep',
     },
     {
       '<leader>sG',
@@ -263,13 +256,20 @@ return {
       end,
       desc = 'LSP Symbols',
     },
+    {
+      '<leader>sS',
+      function()
+        Snacks.picker.lsp_workspace_symbols()
+      end,
+      desc = 'LSP Workspace Symbols',
+    },
     -- Explorer
     {
       '<leader>e',
       function()
-        Snacks.explorer.open { cwd = require('util.root').get_project_root() }
+        Snacks.explorer.open { filter = { cwd = true } }
       end,
-      desc = 'Toggle Explorer (Project Root)',
+      desc = 'Toggle Explorer (Cwd)',
       mode = 'n',
     },
     {
@@ -277,7 +277,7 @@ return {
       function()
         Snacks.explorer.open()
       end,
-      desc = 'Toggle Explorer (Cwd)',
+      desc = 'Toggle Explorer (Root Dir)',
       mode = 'n',
     },
   },
@@ -290,6 +290,7 @@ return {
     picker = { enabled = true },
     notifier = { enabled = true },
     quickfile = { enabled = true },
+    scope = { enabled = true },
     scroll = { enabled = true },
     statuscolumn = { enabled = true },
     words = { enabled = true },
