@@ -33,7 +33,6 @@ return {
           'astro',
           'clangd',
           'cmake',
-          'omnisharp',
           'cssls',
           'dockerls',
           'docker_compose_language_service',

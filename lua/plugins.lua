@@ -22,6 +22,7 @@ require('lazy').setup({
   require 'plugins/conform',
   require 'plugins/lint',
   require 'plugins/rustacean',
+  require 'plugins/roslyn',
   require 'plugins/lazydev',
   require 'plugins/trouble',
   require 'plugins/mini-pairs',
