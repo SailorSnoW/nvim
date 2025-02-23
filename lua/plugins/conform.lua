@@ -24,12 +24,12 @@ return {
           quiet = false, -- not recommended to change
           lsp_format = 'fallback', -- not recommended to change
         },
-        format_on_save = {
-          -- These options will be passed to conform.format()
-          timeout_ms = 500,
-          async = false,
-          lsp_format = 'fallback',
-        },
+        -- format_on_save = {
+        -- These options will be passed to conform.format()
+        --timeout_ms = 500,
+        --async = false,
+        --lsp_format = 'fallback',
+        --},
 
         formatters_by_ft = {
           lua = { 'stylua' },

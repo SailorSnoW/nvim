@@ -13,7 +13,6 @@ require('lazy').setup({
   require 'plugins/mini-icons',
   require 'plugins/snacks',
   require 'plugins/noice',
-  require 'plugins/bufferline',
   require 'plugins/which-key',
   require 'plugins/lualine',
   require 'plugins/blink-cmp',
@@ -29,6 +28,7 @@ require('lazy').setup({
   require 'plugins/grug-far',
   require 'plugins/gitsigns',
   require 'plugins/lazygit',
+  require 'plugins/todo-comments',
 }, {
   ui = {
     -- If you are using a Nerd Font: set icons to an empty table which will use the
