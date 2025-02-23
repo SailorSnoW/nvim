@@ -4,6 +4,9 @@ return {
   event = { 'VeryLazy' },
   config = function()
     require('lualine').setup {
+      -- Required to have filetype icons
+      require('mini.icons').setup(MiniIcons.mock_nvim_web_devicons()),
+
       options = {
         theme = 'rose-pine',
         disabled_filetypes = { statusline = { 'dashboard', 'snacks_dashboard' } },
@@ -15,6 +18,7 @@ return {
         lualine_c = {
           { 'diagnostics' },
           { 'filetype', icon_only = true, separator = '', padding = { left = 1, right = 0 } },
+          { 'filename' },
         },
 
         lualine_x = {
